@@ -2,7 +2,8 @@ const {
   arrayParameterRest,
   arrayRest,
   objectParameterRest,
-  objectRest
+  objectRest,
+  variadicFunction
 } = require('./09-rest');
 
 describe('[09] Rest', () => {
@@ -50,6 +51,18 @@ describe('[09] Rest', () => {
       expect(result).toEqual({
         foo: 1,
         rest: { bar: 2, baz: 3 }
+      });
+    });
+  });
+
+  describe('variadicFunction', () => {
+    it('should return correct values', () => {
+      const result = variadicFunction(1, 2, 3, 4, 5, 6);
+
+      expect(result).toEqual({
+        firstParam: 1,
+        secondParam: 2,
+        rest: [3, 4, 5, 6]
       });
     });
   });

@@ -58,9 +58,23 @@ const objectParameterRest = obj => {
   return { foo, rest };
 };
 
+const variadicFunction = function(firstParam, secondParam) {
+  /**
+   * TODO: use the rest syntax to capture the rest of the parameters
+   * NOTE: you may want to convert this function to an arrow function afterwards
+   */
+
+  return {
+    firstParam,
+    secondParam,
+    rest: Array.from(arguments).slice(2)
+  };
+};
+
 module.exports = {
   arrayRest,
   arrayParameterRest,
   objectRest,
-  objectParameterRest
+  objectParameterRest,
+  variadicFunction
 };
