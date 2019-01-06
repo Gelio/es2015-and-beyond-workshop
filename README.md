@@ -18,6 +18,20 @@ npx jest exercises/01-bare-class
 
 and look at the results.
 
+### Running tests in _watch_ mode
+
+If you are working on a single problem and want to run the tests after every change, run:
+
+```sh
+npx jest exercises/[exercise name here] --watch
+```
+
+e.g.
+
+```sh
+npx jest exercises/01-bare-class --watch
+```
+
 ## Solutions
 
 The solutions are available on the `solutions` branch.
