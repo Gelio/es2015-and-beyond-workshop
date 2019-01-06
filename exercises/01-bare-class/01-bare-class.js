@@ -1,5 +1,3 @@
-/**
- * TODO: create a class named `BareClass`
- */
+class BareClass {}
 
 module.exports = BareClass;
