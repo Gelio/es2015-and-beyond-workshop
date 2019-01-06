@@ -71,3 +71,28 @@ function usingConst() {
   }
 }
 
+function constPropertyReassignment() {
+  // Objects
+  const obj = {
+    foo: 1,
+  }
+
+  // QUESTION: is this possible?
+  obj.foo = 1;
+
+  // Arrays
+  const array = [1,2,3];
+
+  // QUESTION: is this possible?
+  array[0] = 5;
+  array.splice(2, 1);
+
+  // NOTE: to make sure the object/array is not modifiable, use the following:
+  const frozenObj = Object.freeze(obj);
+  frozenObj.foo = 5;
+
+  const frozenArray = Object.freeze(array);
+  frozenArray[0] = 4;
+  // NOTE: this only works for 1 level (nested properties could be modified)
+}
+
