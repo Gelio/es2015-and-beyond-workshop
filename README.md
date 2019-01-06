@@ -2,6 +2,28 @@
 
 The exercises are in the `exercises` directory. Each exercise is in a separate directory.
 
+## Setup
+
+Run
+
+```sh
+npm install
+```
+
+to install the project dependencies.
+
+## Playground
+
+To test out various syntax and functionalities, use the `playground.js` file.
+
+Run
+
+```sh
+npm run playground
+```
+
+and the `playground.js` file will be run and evaluated in your terminal upon every save.
+
 ## Testing
 
 To test if your solution is working, run:

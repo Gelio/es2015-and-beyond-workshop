@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "playground": "nodemon playground.js",
+    "test": "jest exercises",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "jest": "^23.6.0"
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9"
   }
 }
