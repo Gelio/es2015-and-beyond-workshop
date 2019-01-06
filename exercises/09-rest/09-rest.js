@@ -1,28 +1,12 @@
 const arrayRest = () => {
   const array = [1, 2, 3, 4, 5];
 
-  /**
-   * TODO: use the rest syntax to extract `first`, `second` and `rest`.
-   */
-
-  const [first, second] = array;
-  const rest = [];
-
-  array.slice(2).forEach(element => rest.push(element));
+  const [first, second, ...rest] = array;
 
   return { first, second, rest };
 };
 
-const arrayParameterRest = array => {
-  /**
-   * TODO: use the rest syntax to extract `first`, `second` and `rest`.
-   */
-
-  const [first, second] = array;
-  const rest = [];
-
-  array.slice(2).forEach(element => rest.push(element));
-
+const arrayParameterRest = ([first, second, ...rest]) => {
   return { first, second, rest };
 };
 
@@ -33,41 +17,20 @@ const objectRest = () => {
     baz: 3
   };
 
-  /**
-   * TODO: use the rest syntax to extract `foo` and `rest`
-   */
-
-  const { foo } = obj;
-
-  const rest = Object.assign(obj);
-  delete rest.foo;
+  const { foo, ...rest } = obj;
 
   return { foo, rest };
 };
 
-const objectParameterRest = obj => {
-  /**
-   * TODO: use the rest syntax to extract `foo` and `rest`
-   */
-
-  const { foo } = obj;
-
-  const rest = Object.assign(obj);
-  delete rest.foo;
-
+const objectParameterRest = ({ foo, ...rest }) => {
   return { foo, rest };
 };
 
-const variadicFunction = function(firstParam, secondParam) {
-  /**
-   * TODO: use the rest syntax to capture the rest of the parameters
-   * NOTE: you may want to convert this function to an arrow function afterwards
-   */
-
+const variadicFunction = (firstParam, secondParam, ...rest) => {
   return {
     firstParam,
     secondParam,
-    rest: Array.from(arguments).slice(2)
+    rest
   };
 };
 
