@@ -7,8 +7,8 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
  *
  * Try to experiment with **various syntax** of arrow functions when:
- * * returning a value directly without any other side-effects ()
- * *
+ * * returning a value directly without any other side-effects
+ * * when returning objects directly
  */
 
 /**
